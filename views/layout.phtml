@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <base href="/localhost" />
+    <meta charset="UTF-8" />
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $description ?>" />
+    <meta name="keywords" content="<?= $keywords ?>" />
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+
+<body>
+<header>
+    <h1>Ručně dělané hračky</h1>
+</header>
+<?php foreach ($messages as $message) : ?>
+    <p class="message"><?= $message ?></p>
+<?php endforeach ?>
+<nav>
+    <ul>
+        <li><a href="article/introduction">Úvod</a></li>
+        <li><a href="article" hidden>Články</a></li>
+        <li><a href="gallery">Galerie</a></li>
+        <li><a href="contact">Kontakt</a></li>
+
+            <li><a href="upload">Nahrát</a></li>
+
+    </ul>
+</nav>
+<br clear="both" />
+
+<article>
+    <?php $this->controller->extractView(); ?>
+</article>
+
+<footer>
+    <p>Stránky vyrobil
+        <a href=# >Matěj Musil</a>.</p>
+    <a href="administration">Administrace</a>
+
+</footer>
+</body>
+</html>

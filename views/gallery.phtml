@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="../css/style.css" type="text/css" />
+<link rel="stylesheet" href="../css/lightbox.css" type="text/css" />
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="../js/jquery.smooth-scroll.min.js"></script>
+<script src="../js/lightbox.js"></script>
+
+    <h1>Galerie</h1>
+
+    <? $gallery = new GalleryManager('pictures', 3);
+    //$gallery->rotate();
+    $gallery->rename();
+    $gallery->resize();
+    $gallery->load();
+    $gallery->publish(); ?>
